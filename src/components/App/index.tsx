@@ -1,13 +1,16 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import ReactPlayer from 'react-player'
 import styled from '@emotion/styled'
 import EventList from '../EventList'
 
 export default class App extends Component {
-  
-  handleSeekMouseUp = (e: React.MouseEvent<HTMLDivElement, MouseEvent>)  => {
-    this.player.seekTo(parseFloat(e.target.value))
-  }
+
+  player: any;
+
+  // handleSeekMouseUp = (e: React.MouseEvent<HTMLDivElement, MouseEvent>)  => {
+  //   this.player.seekTo(parseFloat(e.target.value))
+  // }
+
   ref = (player: any) => {
     this.player = player
   }
