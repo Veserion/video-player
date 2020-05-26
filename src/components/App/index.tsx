@@ -1,21 +1,30 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import ReactPlayer from 'react-player'
 import styled from '@emotion/styled'
 import EventList from '../EventList'
-import {observable} from 'mobx'
-import {observer} from 'mobx-react'
+import { observable } from 'mobx'
+import { observer } from 'mobx-react'
+
+interface IProgress {
+  played: number
+  playedSeconds: number
+  loaded: number
+  loadedSeconds: number
+}
 
 @observer
 export default class App extends Component {
   player: any;
 
   @observable
-  state = {
-    timestamp: 0
+  timestamp: number = 0
 
+  handleSeek = (sec: number) => {
+    this.player.seekTo(sec / 1000)
   }
-  handleSeek = (sec: number)  => {
-    this.player.seekTo(sec/1000)
+  handleProgress = (progress: IProgress) => {
+    this.timestamp = progress.playedSeconds
+    console.log(this.timestamp)
   }
 
   ref = (player: any) => {
@@ -27,9 +36,12 @@ export default class App extends Component {
       <ReactPlayer url='http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
         ref={this.ref}
         playing={false}
+        progressInterval={100}
+        onProgress={this.handleProgress}
         controls
       />
-      <EventList handleSeek={this.handleSeek}/>
+      <GreenRectangle/>
+      <EventList handleSeek={this.handleSeek} />
     </Root>
   }
 }

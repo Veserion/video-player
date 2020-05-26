@@ -22,6 +22,7 @@ const Root = styled.div`
 margin-left: 10px;
 display: flex;
 justify-content: flex-start;
+cursor: pointer;
 > div {
     flex: 1;
     display: flex;
