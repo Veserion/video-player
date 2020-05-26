@@ -2,18 +2,26 @@ import React, {Component} from 'react'
 import ReactPlayer from 'react-player'
 import styled from '@emotion/styled'
 import EventList from '../EventList'
+import {observable} from 'mobx'
+import {observer} from 'mobx-react'
 
+@observer
 export default class App extends Component {
-
   player: any;
 
-  // handleSeekMouseUp = (e: React.MouseEvent<HTMLDivElement, MouseEvent>)  => {
-  //   this.player.seekTo(parseFloat(e.target.value))
-  // }
+  @observable
+  state = {
+    timestamp: 0
+
+  }
+  handleSeek = (sec: number)  => {
+    this.player.seekTo(sec/1000)
+  }
 
   ref = (player: any) => {
     this.player = player
   }
+
   render() {
     return <Root>
       <ReactPlayer url='http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
@@ -21,7 +29,7 @@ export default class App extends Component {
         playing={false}
         controls
       />
-      <EventList />
+      <EventList handleSeek={this.handleSeek}/>
     </Root>
   }
 }

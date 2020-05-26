@@ -8,6 +8,7 @@ import Event from './Event'
 
 interface IProps {
     dataStore?: DataStore
+    handleSeek: (sec: number) => void
 }
 
 @inject('dataStore')
@@ -20,7 +21,7 @@ export default class EventList extends Component<IProps, {}>{
                 <Title>Список аналитики</Title>
                 <TableHeader />
                 {items?.sort((a, b) => a.timestamp - b.timestamp)
-                .map((item, key) => <Event key={key} item={item} />)}
+                .map((item, key) => <Event key={key} item={item} handleSeek={this.props.handleSeek}/>)}
             </Root>
             : <Loader
                 type="Puff"

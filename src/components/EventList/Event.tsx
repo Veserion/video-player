@@ -5,11 +5,12 @@ import { IItem } from '../../stores/DataStore'
 
 interface IProps {
     item: IItem
+    handleSeek: (sec: number) => void
 }
 
 export default class Event extends React.Component<IProps, {}> {
     render() {
-        return <Root>
+        return <Root onClick={() => this.props.handleSeek(this.props.item.timestamp)}>
             <div>{this.props.item.id}</div>
             <div>{this.props.item.timestamp}</div>
             <div>{this.props.item.duration}</div>
