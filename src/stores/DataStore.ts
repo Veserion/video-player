@@ -17,7 +17,7 @@ export interface IItem {
 export class DataStore extends SubStore {
   @observable items: IItem[] = [];
   
-  constructor(rootStore: RootStore, initState: any) {
+  constructor(rootStore: RootStore) {
     super(rootStore);
     this.syncItems();
   }

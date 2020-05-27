@@ -2,16 +2,11 @@ import { DataStore } from "./index";
 
 class RootStore {
   public dataStore: DataStore;
-  constructor(initState: any) {
+  constructor() {
     this.dataStore = new DataStore(
-      this,
-      initState && initState.dataStore ? initState.dataStore : null
+      this
     );
   }
-
-  public serialize = () => ({
-    dataStore: {},
-  });
 }
 
 export { RootStore };

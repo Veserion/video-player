@@ -25,7 +25,6 @@ export default class App extends React.Component {
   }
   handleProgress = (progress: IProgress) => {
     this.timestamp = progress.playedSeconds
-    console.log(this.timestamp)
   }
 
   ref = (player: any) => {
