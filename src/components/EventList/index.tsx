@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import styled from '@emotion/styled'
 import Loader from 'react-loader-spinner'
-import { IItem, DataStore } from '../../stores/DataStore'
-// import observable from "mobx";
+import { DataStore } from '../../stores/DataStore'
 import { observer, inject } from 'mobx-react'
 import Event from './Event'
 

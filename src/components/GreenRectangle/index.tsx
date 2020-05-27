@@ -14,24 +14,23 @@ interface IProps {
 @inject('dataStore')
 @observer
 export default class GreenRectangle extends React.Component<IProps, {}> {
-
-    items = this.props.dataStore!.items.sort((a, b) => a.timestamp - b.timestamp)
-    currentItems = this.items.filter(item => (Math.ceil(this.props.timestamp * 1000) > item.timestamp) &&
-            (Math.ceil(this.props.timestamp * 1000) < (item.timestamp + item.duration)))
     render() {
-        // const currentItems = this.items.filter(item => (Math.ceil(this.props.timestamp * 1000) > item.timestamp) &&
-        //     (Math.ceil(this.props.timestamp * 1000) < (item.timestamp + item.duration)))
-        return <div>
-            {this.currentItems.map((item, key) => <Rectangle key={key}
-                css={`top: ${item.zone.top}; 
-                left: ${item.zone.left};
-                width: ${item.zone.width};
-                height: ${item.zone.height};`}
-            />)}
-            {
-                console.log(this.currentItems.length)
-            }
-        </div>
+        const items = this.props.dataStore!.items.sort((a, b) => a.timestamp - b.timestamp)
+        const currentItems = items.filter(item => (Math.ceil(this.props.timestamp * 1000) > item.timestamp) &&
+            (Math.ceil(this.props.timestamp * 1000) < (item.timestamp + item.duration)))
+        return items && items.length
+            ? <div>
+                {currentItems.map((item, key) => <Rectangle key={key}
+                    css={css`top: ${item.zone.top}px; 
+                left: ${item.zone.left}px;
+                width: ${item.zone.width}px;
+                height: ${item.zone.height}px;`}
+                />)}
+                {
+                    console.log(currentItems.length)
+                }
+            </div>
+            : null
     }
 }
 
