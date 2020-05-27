@@ -47,6 +47,7 @@
     ]
   },
   "devDependencies": {
-    "@types/react-loader-spinner": "^3.1.0"
+    "@types/react-loader-spinner": "^3.1.0",
+    "gh-pages": "^2.2.0"
   }
 }
