@@ -1,3 +1,5 @@
+/**@jsx jsx*/
+import { css, jsx } from '@emotion/core'
 import React from 'react'
 import ReactPlayer from 'react-player'
 import styled from '@emotion/styled'
@@ -33,15 +35,17 @@ export default class App extends React.Component {
 
   render() {
     return <Root>
-      <ReactPlayer url='http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
+      <ReactPlayer
+        url='http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
         ref={this.ref}
         playing={false}
         progressInterval={100}
         onProgress={this.handleProgress}
         controls
+        css={css`margin-top: 10px; margin-left: 10px;`}
       />
       <GreenRectangle timestamp={this.timestamp} />
-      <EventList handleSeek={this.handleSeek} />
+      <EventList handleSeek={this.handleSeek} css={css`margin-right: 10px !important;`}/>
     </Root>
   }
 }

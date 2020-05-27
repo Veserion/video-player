@@ -36,5 +36,5 @@ export default class GreenRectangle extends React.Component<IProps, {}> {
 
 const Rectangle = styled.div`
 position: absolute;
-background: green;
+background: linear-gradient(to top right, lightgreen, darkgreen);
 `
