@@ -23,6 +23,6 @@ export class DataStore extends SubStore {
   }
 
   @action syncItems = async () => {
-    this.items = (await fetch("http://www.mocky.io/v2/5e60c5f53300005fcc97bbdd").then(response => response.json())) as IItem[];
+    this.items = (await fetch("https://cors-anywhere.herokuapp.com/http://www.mocky.io/v2/5e60c5f53300005fcc97bbdd").then(response => response.json())) as IItem[];
   };
 }
