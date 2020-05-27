@@ -13,7 +13,7 @@ interface IProps {
 
 @inject('dataStore')
 @observer
-export default class GreenRectangle extends React.Component<IProps, {}> {
+export default class GreenRectangle extends React.Component<IProps> {
     render() {
         const items = this.props.dataStore!.items.sort((a, b) => a.timestamp - b.timestamp)
         const currentItems = items.filter(item => (Math.ceil(this.props.timestamp * 1000) > item.timestamp) &&
@@ -26,9 +26,6 @@ export default class GreenRectangle extends React.Component<IProps, {}> {
                 width: ${item.zone.width}px;
                 height: ${item.zone.height}px;`}
                 />)}
-                {
-                    console.log(currentItems.length)
-                }
             </div>
             : null
     }
@@ -36,5 +33,6 @@ export default class GreenRectangle extends React.Component<IProps, {}> {
 
 const Rectangle = styled.div`
 position: absolute;
-background: green;
+background: linear-gradient(to top right, lightgreen, darkgreen);
+border-radius: 2px;
 `

@@ -19,7 +19,7 @@ export default class EventList extends Component<IProps, {}>{
             ? <Root>
                 <Title>Список аналитики</Title>
                 <TableHeader />
-                {items?.sort((a, b) => a.timestamp - b.timestamp)
+                {items!.sort((a, b) => a.timestamp - b.timestamp)
                 .map((item, key) => <Event key={key} item={item} handleSeek={this.props.handleSeek}/>)}
             </Root>
             : <Loader
@@ -35,11 +35,25 @@ export default class EventList extends Component<IProps, {}>{
 
 const Root = styled.div`
 flex: 1;
+margin-right: 10px;
+> div {
+    border-left: 1px solid #9D998E;
+    border-right: 1px solid #9D998E;
+}
+> div:nth-child(2){
+    border-radius: 3px 3px 0 0;
+    border-top: 1px solid #9D998E;
+}
+> div:last-child{
+    border-radius: 0 0 3px 3px;
+    border-bottom: 1px solid #9D998E;
+}
 `
 const Title = styled.div`
 font-family: sans-serif;
 font-size: 20px;
 margin: 10px;
+border: none !important;
 `
 class TableHeader extends React.Component {
     render() {

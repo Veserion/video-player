@@ -7,7 +7,7 @@ interface IProps {
     handleSeek: (sec: number) => void
 }
 
-export default class Event extends React.Component<IProps, {}> {
+export default class Event extends React.Component<IProps>{
     time = new Date(+this.props.item.timestamp)
     render() {
         return <Root onClick={() => this.props.handleSeek(this.props.item.timestamp)}>
