@@ -1,9 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 import ReactPlayer from 'react-player'
 import styled from '@emotion/styled'
 import EventList from '../EventList'
 import { observable } from 'mobx'
 import { observer } from 'mobx-react'
+import GreenRectangle from '../GreenRectangle'
 
 interface IProgress {
   played: number
@@ -13,7 +14,7 @@ interface IProgress {
 }
 
 @observer
-export default class App extends Component {
+export default class App extends React.Component {
   player: any;
 
   @observable
@@ -40,7 +41,7 @@ export default class App extends Component {
         onProgress={this.handleProgress}
         controls
       />
-      <GreenRectangle/>
+      <GreenRectangle timestamp={this.timestamp} />
       <EventList handleSeek={this.handleSeek} />
     </Root>
   }
