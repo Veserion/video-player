@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.js": "/video-player/static/js/main.53e69827.chunk.js",
+    "main.js.map": "/video-player/static/js/main.53e69827.chunk.js.map",
+    "runtime-main.js": "/video-player/static/js/runtime-main.e8b71775.js",
+    "runtime-main.js.map": "/video-player/static/js/runtime-main.e8b71775.js.map",
+    "static/js/2.39a39c67.chunk.js": "/video-player/static/js/2.39a39c67.chunk.js",
+    "static/js/2.39a39c67.chunk.js.map": "/video-player/static/js/2.39a39c67.chunk.js.map",
+    "static/js/3.ce12c7fd.chunk.js": "/video-player/static/js/3.ce12c7fd.chunk.js",
+    "static/js/3.ce12c7fd.chunk.js.map": "/video-player/static/js/3.ce12c7fd.chunk.js.map",
+    "static/js/4.867a9a76.chunk.js": "/video-player/static/js/4.867a9a76.chunk.js",
+    "static/js/4.867a9a76.chunk.js.map": "/video-player/static/js/4.867a9a76.chunk.js.map",
+    "static/js/5.38950a5b.chunk.js": "/video-player/static/js/5.38950a5b.chunk.js",
+    "static/js/5.38950a5b.chunk.js.map": "/video-player/static/js/5.38950a5b.chunk.js.map",
+    "static/js/6.4c8c6ea0.chunk.js": "/video-player/static/js/6.4c8c6ea0.chunk.js",
+    "static/js/6.4c8c6ea0.chunk.js.map": "/video-player/static/js/6.4c8c6ea0.chunk.js.map",
+    "static/js/7.d90a3786.chunk.js": "/video-player/static/js/7.d90a3786.chunk.js",
+    "static/js/7.d90a3786.chunk.js.map": "/video-player/static/js/7.d90a3786.chunk.js.map",
+    "static/js/8.d4cd68cf.chunk.js": "/video-player/static/js/8.d4cd68cf.chunk.js",
+    "static/js/8.d4cd68cf.chunk.js.map": "/video-player/static/js/8.d4cd68cf.chunk.js.map",
+    "static/js/9.14511f8f.chunk.js": "/video-player/static/js/9.14511f8f.chunk.js",
+    "static/js/9.14511f8f.chunk.js.map": "/video-player/static/js/9.14511f8f.chunk.js.map",
+    "static/js/10.78a744ea.chunk.js": "/video-player/static/js/10.78a744ea.chunk.js",
+    "static/js/10.78a744ea.chunk.js.map": "/video-player/static/js/10.78a744ea.chunk.js.map",
+    "static/js/11.6e826496.chunk.js": "/video-player/static/js/11.6e826496.chunk.js",
+    "static/js/11.6e826496.chunk.js.map": "/video-player/static/js/11.6e826496.chunk.js.map",
+    "static/js/12.49e8d686.chunk.js": "/video-player/static/js/12.49e8d686.chunk.js",
+    "static/js/12.49e8d686.chunk.js.map": "/video-player/static/js/12.49e8d686.chunk.js.map",
+    "static/js/13.d09ade28.chunk.js": "/video-player/static/js/13.d09ade28.chunk.js",
+    "static/js/13.d09ade28.chunk.js.map": "/video-player/static/js/13.d09ade28.chunk.js.map",
+    "static/js/14.499df18b.chunk.js": "/video-player/static/js/14.499df18b.chunk.js",
+    "static/js/14.499df18b.chunk.js.map": "/video-player/static/js/14.499df18b.chunk.js.map",
+    "index.html": "/video-player/index.html",
+    "precache-manifest.5792a1feab8a2b321d93b86f20c7e616.js": "/video-player/precache-manifest.5792a1feab8a2b321d93b86f20c7e616.js",
+    "service-worker.js": "/video-player/service-worker.js",
+    "static/js/2.39a39c67.chunk.js.LICENSE.txt": "/video-player/static/js/2.39a39c67.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e8b71775.js",
+    "static/js/2.39a39c67.chunk.js",
+    "static/js/main.53e69827.chunk.js"
+  ]
+}
